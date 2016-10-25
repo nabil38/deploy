@@ -1,5 +1,5 @@
 ## Introduction
-script intended allowing deployment of local development database and files to a remote deployment FTP server. 
+script allowing deployment of local development database and files to a remote deployment FTP server. 
 The backed-up data would be used by the dockerBackup image to deploy a newly installed web site
 ## Install
 deploy the script in a choosen location on the development machine and update the .bashrc ou .zshrc or whatever shell you are using adding those lines with your proper informations.
