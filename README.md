@@ -13,3 +13,7 @@ chmod +x /location/to/deploydata.sh
 ## Usage
 deploy [folder_name] [database_name] 
 if only one argument is given -> folder_name = database_name
+
+the script compresses and transfers the /var/www/folder_name/IMG folder and the database_name as
+- folder_name_IMG.tar.gz
+- database_name.sql.tar.gz
