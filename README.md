@@ -11,6 +11,7 @@ deploy the script in a choosen location on the development machine and update th
 
 make deploydata.sh executable
 - chmod +x /location/to/deploydata.sh
+
 ## Usage
 deploy [folder_name] [database_name] 
 
