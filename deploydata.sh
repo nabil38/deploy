@@ -2,7 +2,7 @@
 
 if [ -z $1 ] ; then read -p "Enter website local folder name: " FOLDER_NAME; else FOLDER_NAME=$1; fi
 if [ ! -z $2 ] ; then DB_NAME=$2; elif [ ! -z $1 ] ; then DB_NAME=$1 ; else read -p "Enter mysql data base name: " DB_NAME; fi
-"Enter website domain: " DOMAIN_NAME;
+read -p "Enter website domain: " DOMAIN_NAME;
 
 mkdir -p ~/export
 if $(mysqldump -hlocalhost -uroot -padmin16idc $DB_NAME > ~/export/$DB_NAME.sql); then
