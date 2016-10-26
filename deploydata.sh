@@ -6,7 +6,7 @@ read -p "Enter website domain: " DOMAIN_NAME;
 
 mkdir -p ~/export
 if $(mysqldump -hlocalhost -uroot -padmin16idc $DB_NAME > ~/export/$DB_NAME.sql); then
-  sed -i -e "s/localhost/$DOMAIN_NAME/g" ~/export/$DB_NAME.sql
+  sed -i -e "s/http:\/\/localhost\/${FOLDER_NAME}/http:\/\/$DOMAIN_NAME/g" ~/export/$DB_NAME.sql
   tar cvzf ~/export/$DB_NAME.sql.tar.gz -C ~/export $DB_NAME.sql
   rm ~/export/$DB_NAME.sql
   echo "base de donnée sauvegardée"
